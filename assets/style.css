@@ -40,18 +40,19 @@ main {
     background-color: rgb(59,63,69);
     height:             82%;
     padding-top:        40px;
+    gap:                40px;
 }
 
 .shopping-list {
     width:              67%;
     height:             61%;
+    margin-bottom:      40px;
 }
 
 .buy-item {
     display:            flex;
     align-items:        center;
     height:             65px;
-    /*padding-left:       10px;*/
     font-size:          25px;
     color:            #fff;
 }
@@ -88,12 +89,36 @@ main {
     transition:         all .1s ease-in;
 }
 
+span.comment {
+    font-size:          18px;
+    margin-left:        10px;
+    padding-top:        5px;
+    color:            rgb(174, 196, 214);
+}
+
+span.comment::before {
+    content:            "(";
+}
+
+span.comment::after {
+    content:            ")";
+}
+
+.bon-appetit {
+    display:            flex;
+    justify-content:    center;
+    align-items:        center;
+    width:              67%;
+    height:             61px;
+    background-color: rgb(74, 79, 86);
+    color:            rgb(235,126,127);
+}
 
 /* checkbox styling */
 .list-checkbox {
     cursor: pointer;
     display: flex;
-    align-items: center;
+    align-items:center;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -143,5 +168,11 @@ main {
 
 .checkbox-default:checked ~ .checkbox-descr {
     text-decoration: line-through;
+    color: rgb(163, 160, 181);
+}
+
+.checkbox-default:checked ~ .comment {
+    text-decoration: line-through;
+    color: rgb(163, 160, 181);
 }
 /* /checkbox styling */
